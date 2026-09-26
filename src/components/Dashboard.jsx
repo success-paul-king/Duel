@@ -1,4 +1,5 @@
 import DocumentParser from "./DocumentParser"
+import EngineStatus from "./EngineStatus"
 
 function Dashboard() {
   return (
@@ -9,6 +10,8 @@ function Dashboard() {
       </section>
 
       <DocumentParser />
+
+      <EngineStatus />
     </main>
   )
 }
