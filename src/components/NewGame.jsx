@@ -46,7 +46,12 @@ function NewGame() {
 
           <div className="card-divider"></div>
 
-          <button className="game-button dark">Create Room +</button>
+          <button
+            className="game-button dark"
+            onClick={() => navigate("/lobby")}
+          >
+            Create Room +
+          </button>
         </div>
 
         {/* Join Lobby */}

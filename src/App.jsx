@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import "./App.css"
-import Header from "./components/Header"
-import Dashboard from "./components/Dashboard"
-import NewGame from "./components/NewGame"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Dashboard from "./components/Dashboard";
+import NewGame from "./components/NewGame";
+import Lobby from "./components/Lobby";
 function App() {
   return (
     <BrowserRouter>
@@ -18,13 +18,11 @@ function App() {
           }
         />
 
-        <Route
-          path="/new-game"
-          element={<NewGame />}
-        />
+        <Route path="/new-game" element={<NewGame />} />
+        <Route path="/lobby" element={<Lobby />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

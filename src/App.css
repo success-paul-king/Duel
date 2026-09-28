@@ -426,3 +426,151 @@
   font-weight: 600;
   cursor: pointer;
 }
+/* =========================
+   LOBBY SCREEN
+========================= */
+
+.lobby-page {
+  min-height: 100vh;
+  background: #F8FAFC;
+}
+
+.lobby-header {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.lobby-header h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.lobby-content {
+  padding: 24px 16px;
+}
+
+/* Room code */
+
+.room-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.room-code span {
+  color: #06B6D4;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1E293B;
+  cursor: pointer;
+}
+
+/* Members */
+
+.members-section h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  border-bottom: 1px solid #CBD5E1;
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #1E293B;
+}
+
+.member-info svg {
+  color: #1E293B;
+}
+
+.member-xp {
+  color: #F59E0B;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Settings */
+
+.lobby-settings {
+  margin-top: 18px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+}
+
+.setting-row > span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.setting-row select {
+  width: 68px;
+  height: 22px;
+  padding: 0 5px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #64748B;
+  font-family: inherit;
+  font-size: 8px;
+  outline: none;
+}
+
+/* Start button */
+
+.lobby-start-button {
+  display: block;
+  width: 134px;
+  height: 25px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 3px;
+  background: #1E293B;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.host-note {
+  margin: 8px 0 0;
+  text-align: center;
+  color: #94A3B8;
+  font-size: 9px;
+}
