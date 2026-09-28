@@ -1,5 +1,7 @@
-import { Cpu } from "lucide-react"
+import { Cpu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 function EngineStatus() {
+  const navigate = useNavigate();
   return (
     <section className="engine-status">
       <div className="engine-title">
@@ -17,11 +19,11 @@ function EngineStatus() {
         <span className="status parsing">Parsing...</span>
       </div>
 
-      <button className="new-game-button">
+      <button className="new-game-button" onClick={() => navigate("/new-game")}>
         New Game →
       </button>
     </section>
-  )
+  );
 }
 
-export default EngineStatus
+export default EngineStatus;
