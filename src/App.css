@@ -1,21 +1,101 @@
 .header {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.header h2 {
-  margin: 0;
-  font-size: 18px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #06B6D4;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
+  gap: 8px;
+}
+
+.xp-badge {
+  padding: 4px 8px;
+  border: 1px solid #fbbf24;
+  border-radius: 10px;
+  color: #f59e0b;
+  font-size: 10px;
+  font-weight: 600;
+  background: #fffbeb;
+}
+
+.avatar {
+  font-size: 18px;
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  padding: 2px;
+  color: #1E293B;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 52px;
+  right: 12px;
+  width: 150px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.menu-panel button {
+  display: block;
+  width: 100%;
+  padding: 8px 6px;
+  border: none;
+  background: transparent;
+  color: #1E293B;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.menu-panel button:hover {
+  background: #F8FAFC;
+}
+
+.menu-panel .close-menu {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: auto;
+  padding: 0;
+  font-size: 18px;
 }
 .dashboard {
   padding: 20px;
@@ -24,19 +104,22 @@
 .welcome h1 {
   margin: 0 0 4px;
   font-size: 22px;
+  color: #1E293B;
 }
 
 .welcome p {
   margin: 0;
-  font-size: 13px;
-  color: #64748b;
+  font-size: 14px;
+  letter-spacing: 0%;
+  color: #64748B;
 }
 .document-parser {
   margin-top: 20px;
   padding: 16px;
-  background: white;
-  border: 1px solid #dbe2e8;
-  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px -2px #1E293B ;
 }
 
 .parser-title {
@@ -89,7 +172,7 @@
   padding: 9px 18px;
   border: none;
   border-radius: 5px;
-  background: #08b7d4;
+  background: #06B6D4;
   color: white;
   font-size: 12px;
   cursor: pointer;
@@ -98,9 +181,10 @@
   margin-top: 20px;
   padding: 16px;
   background: white;
-  border: 1px solid #dbe2e8;
+  border: 1px solid #dbe2e8;  
+  box-shadow: 0px 2px 5px -2px #1E293B ;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+ 
 }
 
 .engine-title {
@@ -154,7 +238,7 @@
   padding: 11px;
   border: none;
   border-radius: 5px;
-  background: #0f172a;
+  background: #1E293B;
   color: white;
   font-size: 12px;
   font-weight: 600;
