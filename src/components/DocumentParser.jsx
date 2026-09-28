@@ -1,8 +1,9 @@
+import { FileText, CloudUpload } from "lucide-react";
 function DocumentParser() {
   return (
     <section className="document-parser">
       <div className="parser-title">
-        <span className="parser-icon">📄</span>
+        <FileText size={18} />
 
         <div>
           <h2>AI Document Parser</h2>
@@ -11,7 +12,9 @@ function DocumentParser() {
       </div>
 
       <div className="upload-area">
-        <div className="upload-icon">☁️</div>
+        <div className="upload-icon">
+          <CloudUpload size={30} />
+        </div>
 
         <h3>Drag and Drop Study Syllabus or PDF</h3>
 
@@ -20,7 +23,7 @@ function DocumentParser() {
         <button>Browse Files</button>
       </div>
     </section>
-  )
+  );
 }
 
-export default DocumentParser
+export default DocumentParser;

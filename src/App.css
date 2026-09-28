@@ -45,9 +45,12 @@
   font-weight: 600;
   background: #fffbeb;
 }
-
+.parser-title svg,
+.upload-icon svg {
+  color: #06B6D4;
+}
 .avatar {
-  font-size: 18px;
+  color: #1E293B;
 }
 
 .menu-button {
@@ -195,7 +198,7 @@
 }
 
 .engine-icon {
-  font-size: 18px;
+  color: #06B6D4;
 }
 
 .engine-title h2 {

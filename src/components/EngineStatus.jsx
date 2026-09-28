@@ -1,8 +1,9 @@
+import { Cpu } from "lucide-react"
 function EngineStatus() {
   return (
     <section className="engine-status">
       <div className="engine-title">
-        <span className="engine-icon">⚙</span>
+        <Cpu className="engine-icon" size={18} />
         <h2>Engine Status</h2>
       </div>
 
