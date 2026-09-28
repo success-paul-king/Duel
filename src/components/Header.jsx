@@ -1,5 +1,13 @@
 import { useState } from "react"
-import { MoreVertical, UserCircle, X } from "lucide-react"
+import {
+  MoreVertical,
+  UserCircle,
+  X,
+  Trophy,
+  Sun,
+  Info,
+  LogOut
+} from "lucide-react"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -35,10 +43,25 @@ function Header() {
             <X size={16} />
           </button>
 
-          <button>Leaderboard</button>
-          <button>Toggle Modes</button>
-          <button>About</button>
-          <button>Log Out</button>
+          <button>
+  <Trophy size={16} />
+  <span>Leaderboard</span>
+</button>
+
+<button>
+  <Sun size={16} />
+  <span>Toggle Modes</span>
+</button>
+
+<button>
+  <Info size={16} />
+  <span>About</span>
+</button>
+
+<button>
+  <LogOut size={16} />
+  <span>Log Out</span>
+</button>
         </div>
       )}
     </header>
