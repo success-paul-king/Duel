@@ -1,16 +1,17 @@
-import {
-  ArrowLeft,
-  Copy,
-  UserCircle
-} from "lucide-react"
+import { ArrowLeft, Copy, UserCircle } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 function Lobby() {
   const navigate = useNavigate()
 
+  const roomCode = "#CS-8842-X"
+
+  const copyRoomCode = async () => {
+    await navigator.clipboard.writeText(roomCode)
+  }
+
   return (
     <main className="lobby-page">
-
       <header className="lobby-header">
         <button
           className="back-button"
@@ -23,20 +24,18 @@ function Lobby() {
         <h1>Lobby</h1>
       </header>
 
-
       <section className="lobby-content">
-
         <div className="room-code">
-          <span># CS-8842-X</span>
+          <span>{roomCode}</span>
 
           <button
             className="copy-button"
+            onClick={copyRoomCode}
             aria-label="Copy room code"
           >
             <Copy size={23} />
           </button>
         </div>
-
 
         <section className="members-section">
           <h2>Members</h2>
@@ -69,9 +68,7 @@ function Lobby() {
           </div>
         </section>
 
-
         <section className="lobby-settings">
-
           <div className="setting-row">
             <span>No. of Questions</span>
 
@@ -101,9 +98,7 @@ function Lobby() {
               <option value="Hard">Hard</option>
             </select>
           </div>
-
         </section>
-
 
         <button className="lobby-start-button">
           Start
@@ -112,9 +107,7 @@ function Lobby() {
         <p className="host-note">
           Only host can start a game
         </p>
-
       </section>
-
     </main>
   )
 }
