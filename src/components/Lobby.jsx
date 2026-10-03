@@ -1,14 +1,14 @@
-import { ArrowLeft, Copy, UserCircle } from "lucide-react"
-import { useNavigate } from "react-router-dom"
+import { ArrowLeft, Copy, UserCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function Lobby() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const roomCode = "#CS-8842-X"
+  const roomCode = "#CS-8842-X";
 
   const copyRoomCode = async () => {
-    await navigator.clipboard.writeText(roomCode)
-  }
+    await navigator.clipboard.writeText(roomCode);
+  };
 
   return (
     <main className="lobby-page">
@@ -100,16 +100,17 @@ function Lobby() {
           </div>
         </section>
 
-        <button className="lobby-start-button">
+        <button
+          className="lobby-start-button"
+          onClick={() => navigate("/match-room")}
+        >
           Start
         </button>
 
-        <p className="host-note">
-          Only host can start a game
-        </p>
+        <p className="host-note">Only host can start a game</p>
       </section>
     </main>
-  )
+  );
 }
 
-export default Lobby
+export default Lobby;
