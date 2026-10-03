@@ -1,57 +1,121 @@
-import { ArrowLeft, CheckCircle, XCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+
+import RankingRow from "./RankingRow"
+import AnswerReview from "./AnswerReview"
 
 function Results() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  const resultsData = {
+    players: [
+      {
+        rank: 1,
+        name: "Calum",
+        xp: 50,
+        points: 760
+      },
+      {
+        rank: 2,
+        name: "John",
+        xp: 45,
+        points: 700,
+        isCurrentUser: true
+      },
+      {
+        rank: 3,
+        name: "Xavier",
+        xp: 40,
+        points: 680
+      },
+      {
+        rank: 4,
+        name: "Masha",
+        xp: 20,
+        points: 670
+      }
+    ],
+
+    score: {
+      correct: 12,
+      total: 15
+    },
+
+    answers: [
+      {
+        question:
+          "Which of these is not a data Structure",
+        answer: "Hierarchical Structure",
+        correct: true
+      },
+
+      {
+        question:
+          "Which of the following data structures operates explicitly on a Last-In, First-Out (LIFO) operational mechanism",
+        answer: "Stack",
+        correct: true
+      },
+
+      {
+        question:
+          "Which of the following data structures operates explicitly on a First-In, First-Out (FIFO) operational mechanism",
+        answer: "Queue",
+        correct: false
+      },
+
+      {
+        question:
+          "Which is an advantage of data structure",
+        answer: "Efficiency",
+        correct: true
+      },
+
+      {
+        question:
+          "All except one is not an advantage of data structure in computing",
+        answer: "Data Auditing",
+        correct: true
+      },
+
+      {
+        question:
+          "Which of these is not a data Structure",
+        answer: "Hierarchical Structure",
+        correct: true
+      },
+
+      {
+        question:
+          "Which of the following data structures operates explicitly on a Last-In, First-Out (LIFO) operational mechanism",
+        answer: "Stack",
+        correct: true
+      }
+    ]
+  }
 
   return (
     <main className="results-page">
+
       <header className="results-header">
-        <button
-          className="back-button"
-          onClick={() => navigate("/live-duel")}
-          aria-label="Go back"
-        >
-          <ArrowLeft size={20} />
-        </button>
+        
 
         <h1>Results</h1>
       </header>
 
       <section className="results-content">
+
         {/* Rankings */}
         <section className="rankings">
-          <div className="ranking-row">
-            <span className="rank">1.</span>
-            <span className="rank-name">Calum</span>
-            <span className="rank-xp">+50XP</span>
-            <span className="rank-points">760 pts</span>
-          </div>
-
-          <div className="ranking-row current-player">
-            <span className="rank">2.</span>
-            <span className="rank-name">John</span>
-            <span className="rank-xp">+45XP</span>
-            <span className="rank-points">700 pts</span>
-          </div>
-
-          <div className="ranking-row">
-            <span className="rank">3.</span>
-            <span className="rank-name">Xavier</span>
-            <span className="rank-xp">+40XP</span>
-            <span className="rank-points">680 pts</span>
-          </div>
-
-          <div className="ranking-row">
-            <span className="rank">4.</span>
-            <span className="rank-name">Masha</span>
-            <span className="rank-xp">+20XP</span>
-            <span className="rank-points">670 pts</span>
-          </div>
+          {resultsData.players.map((player) => (
+            <RankingRow
+              key={player.rank}
+              {...player}
+            />
+          ))}
         </section>
 
-        {/* Action Buttons */}
+        {/* Actions */}
         <div className="results-actions">
+
           <button
             className="results-button rematch"
             onClick={() => navigate("/match-room")}
@@ -60,6 +124,7 @@ function Results() {
           </button>
 
           <div className="secondary-results-actions">
+
             <button
               className="results-button secondary"
               onClick={() => navigate("/leaderboard")}
@@ -73,120 +138,36 @@ function Results() {
             >
               Dashboard
             </button>
+
           </div>
+
         </div>
+
         {/* Answers */}
         <section className="answers-section">
+
           <div className="answers-title">
             <h2>Answers</h2>
-            <span className="answers-score">12/15 Correct</span>
+
+            <span className="answers-score">
+              {resultsData.score.correct}/
+              {resultsData.score.total} Correct
+            </span>
           </div>
 
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>Which of these is not a Data Structure</span>
-            </div>
+          {resultsData.answers.map((answer, index) => (
+            <AnswerReview
+              key={index}
+              {...answer}
+            />
+          ))}
 
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Hierarchical Structure</span>
-            </div>
-          </div>
-
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>
-                Which of the following data structures operates explicitly on a
-                Last-In, First-Out (LIFO) operational mechanism
-              </span>
-            </div>
-
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Stack</span>
-            </div>
-          </div>
-
-          <div className="answer-review wrong">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>
-                Which of the following data structures operates explicitly on a
-                First-In, First-Out (FIFO) operational mechanism
-              </span>
-            </div>
-
-            <div className="review-answer">
-              <XCircle size={13} />
-              <strong>Ans</strong>
-              <span>Queue</span>
-            </div>
-          </div>
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>Which is an advantage of data structure</span>
-            </div>
-
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Efficiency</span>
-            </div>
-          </div>
-
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>
-                All except one is not an advantage of data structure in
-                computing
-              </span>
-            </div>
-
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Data Auditing</span>
-            </div>
-          </div>
-
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>Which of these is not a data Structure</span>
-            </div>
-
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Hierarchical Structure</span>
-            </div>
-          </div>
-
-          <div className="answer-review correct">
-            <div className="review-question">
-              <strong>Question</strong>
-              <span>
-                Which of the following data structures operates explicitly on a
-                Last-In, First-Out (LIFO) operational mechanism
-              </span>
-            </div>
-
-            <div className="review-answer">
-              <CheckCircle size={13} />
-              <strong>Ans</strong>
-              <span>Stack</span>
-            </div>
-          </div>
         </section>
+
       </section>
+
     </main>
-  );
+  )
 }
 
-export default Results;
+export default Results

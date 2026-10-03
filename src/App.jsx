@@ -7,6 +7,7 @@ import Lobby from "./components/Lobby";
 import MatchRoom from "./components/MatchRoom";
 import LiveDuel from "./components/LiveDuel";
 import Results from "./components/Results";
+import Leaderboard from "./components/Leaderboard";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/match-room" element={<MatchRoom />} />
         <Route path="/live-duel" element={<LiveDuel />} />
         <Route path="/results" element={<Results />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </BrowserRouter>
   );

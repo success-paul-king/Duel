@@ -1106,3 +1106,86 @@
 .ranking-row.current-player .rank-xp {
   color: #06B6D4;
 }
+/* 
+   LEADERBOARD
+ */
+
+.leaderboard-page {
+  min-height: 100vh;
+  background: #F8FAFC;
+}
+
+.leaderboard-header {
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.leaderboard-header h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.leaderboard-list {
+  padding: 38px 16px 20px;
+}
+
+.leaderboard-row {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #CBD5E1;
+  font-size: 10px;
+}
+
+.leaderboard-rank {
+  width: 28px;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.leaderboard-avatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1E293B;
+  color: #FFFFFF;
+}
+
+.leaderboard-name {
+  flex: 1;
+  color: #1E293B;
+  font-weight: 600;
+}
+
+.leaderboard-xp {
+  color: #F59E0B;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.leaderboard-row.current-player .leaderboard-rank {
+  color: #06B6D4;
+}
+
+.leaderboard-row.current-player .leaderboard-avatar {
+  background: #1E293B;
+}
+
+.leaderboard-row.current-player .leaderboard-name {
+  color: #1E293B;
+}
+
+.leaderboard-row.current-player .leaderboard-xp {
+  color: #06B6D4;
+}
