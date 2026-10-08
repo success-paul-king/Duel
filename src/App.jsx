@@ -8,6 +8,8 @@ import MatchRoom from "./components/MatchRoom";
 import LiveDuel from "./components/LiveDuel";
 import Results from "./components/Results";
 import Leaderboard from "./components/Leaderboard";
+import Profile from "./components/Profile";
+import SignUp from "./components/SignUp";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +30,8 @@ function App() {
         <Route path="/live-duel" element={<LiveDuel />} />
         <Route path="/results" element={<Results />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );

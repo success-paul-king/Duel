@@ -1189,3 +1189,577 @@
 .leaderboard-row.current-player .leaderboard-xp {
   color: #06B6D4;
 }
+/* =========================
+   PROFILE
+========================= */
+
+.profile-page {
+  min-height: 100vh;
+  background: #F8FAFC;
+  color: #1E293B;
+  padding-bottom: 30px;
+}
+
+/* Hero */
+
+.profile-hero {
+  position: relative;
+  height: 150px;
+  padding: 20px 24px;
+  background: linear-gradient(
+    135deg,
+    #054050,
+    #06B6D4
+  );
+}
+.profile-name {
+  position: absolute;
+  left: 140px;
+  top: 120px;
+  z-index: 2;
+}
+
+.profile-name h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: #1E293B;
+}
+.profile-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 900;
+  color: #1E293B;
+}
+
+.profile-logo {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #1E293B;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-actions {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  display: flex;
+  gap: 14px;
+}
+
+.profile-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1E293B;
+  cursor: pointer;
+}
+
+/* Avatar */
+
+.profile-avatar {
+  position: absolute;
+  left: 34px;
+  bottom: -44px;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  background: #1E293B;
+  color: #FFFFFF;
+}
+
+/* Identity */
+
+.profile-identity {
+  height: 58px;
+  padding: 14px 24px 10px 140px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-identity p {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #1E293B;
+  white-space: nowrap;
+  font-weight: 600;
+}
+/* Sections */
+
+.profile-section {
+  padding: 0 24px;
+}
+
+.profile-section h2,
+.profile-chart-card h2 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #94A3B8;
+}
+
+/* Overview */
+
+.overview-section {
+  margin-top: 12px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 10px 20px;
+  margin-top: 12px;
+}
+
+.overview-stat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.overview-stat svg {
+  color: #06B6D4;
+}
+
+.overview-stat:first-child svg,
+.overview-stat:first-child strong {
+  color: #F59E0B;
+}
+
+.overview-stat:last-child svg {
+  color: #1E293B;
+}
+
+.overview-stat strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+
+/* Duel Log */
+
+.duel-log-section {
+  margin-top: 24px;
+}
+
+.duel-log {
+  margin-top: 8px;
+}
+
+.duel-log-row {
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #CBD5E1;
+}
+
+.duel-avatar {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: #1E293B;
+  color: #FFFFFF;
+}
+
+.duel-avatar span {
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.duel-opponent {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.duel-win-rate {
+  font-size: 11px;
+  font-weight: 600;
+  color: #F59E0B;
+}
+
+/* Chart Cards */
+
+.profile-chart-card {
+  margin: 18px 24px 0;
+  padding: 16px 14px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(30, 41, 59, 0.15);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart-header h2 {
+  color: #1E293B;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.chart-header button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1E293B;
+  font-family: inherit;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+/* Progress Chart */
+
+.progress-chart {
+  display: flex;
+  height: 130px;
+  margin-top: 8px;
+}
+
+.chart-y-axis {
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 0 18px;
+  color: #475569;
+  font-size: 7px;
+}
+
+.chart-area {
+  position: relative;
+  flex: 1;
+  height: 115px;
+}
+
+.chart-grid {
+  position: absolute;
+  inset: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-grid span {
+  width: 100%;
+  height: 1px;
+  background: #E2E8F0;
+}
+
+.progress-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 95px;
+  overflow: visible;
+}
+
+.chart-months {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #475569;
+  font-size: 7px;
+}
+
+/* Win Rate */
+
+.win-rate-card {
+  min-height: 220px;
+}
+
+.win-rate-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  margin-top: 20px;
+}
+
+.donut-chart {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    #06B6D4 0deg 223deg,
+    #1E293B 223deg 360deg
+  );
+}
+
+.donut-hole {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.win-rate-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 9px;
+  color: #1E293B;
+}
+
+.win-rate-legend div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.legend-dot.win {
+  background: #06B6D4;
+}
+
+.legend-dot.lose {
+  background: #1E293B;
+}
+/* =========================
+   SIGN UP
+========================= */
+
+.signup-page {
+  height: 110vh;
+  min-height: 0;
+  /*overflow: hidden;*/
+  background: #F8FAFC;
+  color: #1E293B;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 24px 40px 20px;
+}
+
+/* Logo */
+
+.signup-logo {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #06B6D4;
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Heading */
+
+.signup-heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.signup-heading h1 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.signup-heading p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+/* Form */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.input-wrapper {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  background: #F8FAFC;
+}
+
+.input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1E293B;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.input-wrapper input::placeholder {
+  color: #CBD5E1;
+  font-weight: 400;
+}
+
+.input-wrapper svg {
+  flex-shrink: 0;
+  color: #CBD5E1;
+}
+
+/* Password */
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #CBD5E1;
+}
+
+/* Create Account */
+
+.create-account-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 9px;
+  background: #0F172A;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 3px 5px rgba(15, 23, 42, 0.25);
+}
+
+/* Divider */
+
+.signup-divider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0 14px;
+}
+
+.signup-divider span {
+  flex: 1;
+  height: 1px;
+  background: #CBD5E1;
+}
+
+.signup-divider p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 11px;
+}
+
+/* Google */
+
+.google-signup-button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  background: #FFFFFF;
+  color: #1E293B;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+}
+.google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+/* Login */
+
+.login-text {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #94A3B8;
+  font-size: 12px;
+}
+
+.login-link {
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #06B6D4;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
