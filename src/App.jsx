@@ -10,6 +10,11 @@ import Results from "./components/Results";
 import Leaderboard from "./components/Leaderboard";
 import Profile from "./components/Profile";
 import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import Loading from "./components/Loading";
+import ErrorMessage from "./components/ErrorMessage";
+import NoInternet from "./components/NoInternet";
+import MatchRoomError from "./components/MatchRoomError";
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +37,11 @@ function App() {
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/loading" element={<Loading />} />
+        <Route path="/error-message" element={<ErrorMessage />} />
+        <Route path="/no-internet" element={<NoInternet />} />
+        <Route path="/match-room-error" element={<MatchRoomError />} />
       </Routes>
     </BrowserRouter>
   );
